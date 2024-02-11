@@ -26,3 +26,12 @@ next_btn.addEventListener('click', (e) => {
 }
 changeSlide();
 });
+
+//scroll the products with mouse wheel
+const scrollContainer = document.querySelectorAll('.products');
+for (const item of scrollContainer) {
+  item.addEventListener('wheel', (e)=>{
+    e.preventDefault();
+    item.scrollLeft += e.deltaY;
+  })
+}
